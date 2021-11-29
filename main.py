@@ -40,3 +40,13 @@ elif a == b:
 else:
     print("something else")
 # Добавил операции с переменными
+
+a = 10
+b = 10
+if a > a:
+    print("a больше b")
+elif a == b:
+    print("a равно b")
+else:
+    print("something else")
+# Добавил новую ветку и изменил значения переменных
