@@ -30,3 +30,13 @@ elif 3 == 3:
 else:
     print("something else")
  # Добавил булевые операции
+
+a = 4
+b = 4
+if a > a:
+    print("a больше b")
+elif a == b:
+    print("a равно b")
+else:
+    print("something else")
+# Добавил операции с переменными
