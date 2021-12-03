@@ -1,19 +1,31 @@
 # №2
 string = "Быстрый коричнивый лис прыгает над ленивой собакой"
 print(string)
-print("")
+print("--")
+
 # №3
 newstring = ["Быстрый", "коричневый", "лис", "прыгает", "над", "ленивой", "собакой"]
 for elem in newstring:
     print(elem)
-print("")
+print("--")
 
 print(string.split())
-print("")
+print("--")
 for elem in string.split():
     print(elem)
-print("")
+print("--")
+
 new1string = (string.split())
 for elem in newstring:
     print(elem)
+print("--")
+
+for s in string:
+    print(s)
+print("--")
+
+print(list(string))
+print("--")
+
+
 
