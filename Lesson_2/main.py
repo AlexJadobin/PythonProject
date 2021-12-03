@@ -57,8 +57,6 @@ moy_dict = {
 print("moy_dict ", moy_dict)
 print("--")
 
-
-print("мой m_dict ", moy_dict)
 moy_dict["numbers"] = list(range(0, 100))
 print(moy_dict)
 print ("--")
@@ -70,6 +68,22 @@ def kvadrat():
 kvadrat()
 print (" ")
 print ("---")
+
+m_dict = {}
+m1_dict = dict()
+print("создание  и печать пустых словарей m_dict:", m_dict, "и m1_dict:",m1_dict)
+print ("--")
+m_dict[" "] = list(range(0, 100))
+print(m_dict)
+print ("--")
+
+# #8
+def create_dict(number):
+    m_dict= {}
+    for i in range(1,number+1):
+        m_dict[i] = (i ** 2,i ** 2,i ** 2)
+    return m_dict
+print(create_dict(100))
 
 
 
