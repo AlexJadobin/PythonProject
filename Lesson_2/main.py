@@ -48,7 +48,7 @@ def kvadrat(list):
 kvadrat(str1)
 print("--")
 
-#7  работа со словарями
+# №7  работа со словарями
 moy_dict = {
     1: "один",
     2: "два",
@@ -77,17 +77,10 @@ m_dict[" "] = list(range(0, 100))
 print(m_dict)
 print ("--")
 
-# #8
+# №8
 def create_dict(number):
     m_dict= {}
     for i in range(1,number+1):
         m_dict[i] = (i ** 2,i ** 2,i ** 2)
     return m_dict
 print(create_dict(100))
-
-
-
-
-
-
-
