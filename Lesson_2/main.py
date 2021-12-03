@@ -11,7 +11,7 @@ for elem in newstring:
     print(elem)
 print("--")
 
-print(string.split())
+print("печать с функцией .split", string.split())
 print("--")
 for elem in string.split():
     print(elem)
@@ -78,9 +78,21 @@ print(m_dict)
 print ("--")
 
 # №8
-def create_dict(number):
+kvadrat_str1 = []
+for i in str1:
+    kvadrat_str1.append(i ** 2)
+    if i == 99:
+        print("----")
+        print("печать строки квадратов чисел")
+        print(kvadrat_str1)
+        print("----")
+
+def create_dict1(number):
     m_dict= {}
-    for i in range(1,number+1):
-        m_dict[i] = (i ** 2,i ** 2,i ** 2)
+    s = kvadrat_str1
+    for i in s:
+        v = str(i)
+        m_dict[i] = (v*3)
     return m_dict
-print(create_dict(100))
+print("печать словаря, где ключ квадрат числа, а значение строка состоящая из трех ключей:")
+print(create_dict1(100))
