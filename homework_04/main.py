@@ -42,4 +42,42 @@ def kub_number(*numbers, power=3):
 kub_number(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
 print("расчет, формирование списка [kub_sps] кубов целых чисел и печать списка")
 print(kub_sps)
+print('____________')
 
+
+
+# задание №2
+
+print('____________')
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+# четные числа
+def filter_odd(vxod_num):
+    if (vxod_num % 2) == 0:
+        return True
+    else:
+        return False
+
+vixod_filter = filter(filter_odd, numbers)
+print("Четные числа: ", list(vixod_filter))
+
+# нечетные чисела
+def filter_odd(vxod_num):
+    if (vxod_num % 2) > 0:
+        return True
+    else:
+        return False
+
+vixod_filter = filter(filter_odd, numbers)
+print("Нечетные числа: ", list(vixod_filter))
+
+# простые числа
+def filter_odd(vxod_num):
+    for i in range(2, vxod_num):
+        if vxod_num % i == 0:
+            return False
+        else:
+            return True
+
+vixod_filter = filter(filter_odd, numbers)
+print("Простые числа: ", list(vixod_filter))
