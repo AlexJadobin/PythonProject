@@ -15,7 +15,8 @@ for chislo in range(1, n):
         prost_str.append(chislo)
 print("список простых чисел до n=", n)
 print(prost_str)
-print("------")
+print("---------")
+
 print("-Вариант №2-")
 
 # занятие №3, задание №1, вариант №2
