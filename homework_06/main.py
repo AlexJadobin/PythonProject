@@ -18,7 +18,7 @@ class Car:
                 print('Топлива имеется, авто заведен')
                 return True
             else:
-                print('Авто не завелся, так как остаток топлива = ', self.fuel)
+                print('Авто не завелся, так как остаток топлива =  ', self.fuel)
 moy_car = Car(800,'незаведено',25,10)
 print(moy_car.start())
 
