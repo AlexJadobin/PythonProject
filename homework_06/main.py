@@ -35,7 +35,6 @@ class Car:
             if self.fuel < self.fuel_consumption * distance:
                 raise NotEnoughFuel
         except(NotEnoughFuel):
-            #self.fuel -= self.fuel_consumption * distance
             print('Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров, а лучше полный бак!!!')
             print('---------')
         else:
