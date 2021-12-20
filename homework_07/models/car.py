@@ -5,3 +5,5 @@ class Car:
         self.fuel = fuel        # int, условное количество оставшегося топлива
         self.fuel_consumption = fuel_consumption    # 5. int, условное значение,
         # сколько единиц топлива расходуется на единицу расстояния
+    def mowe(self):	# Метод для Авто
+        print("Движение по дороге")
