@@ -4,5 +4,5 @@ class VehicleBase:
     def mowe(self):  # Метод для любого транспорта
         print("Я Транспорт, Выполняю движение")
 
-v1 = VehicleBase(10)
-v1.mowe()
+#v1 = VehicleBase(10)
+#v1.mowe()

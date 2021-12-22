@@ -20,7 +20,7 @@ class Car:
                 else:
                     raise LowFuelError
         except(LowFuelError):
-            print('Исключение. Топлива нет, толкаем авто до заправки')
+            print('!!!  Исключение. Топлива нет, толкаем авто до заправки')
             return False
         else:
             print('Автомобиль готов, топливо:',self.fuel,'литров, можно ехать')
@@ -33,7 +33,7 @@ class Car:
             if self.fuel < self.fuel_consumption * distance:
                 raise NotEnoughFuel
         except(NotEnoughFuel):
-            print('Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров, а лучше полный бак!!!')
+            print('!!!  Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров, а лучше полный бак!!!')
             print('---------')
         else:
             self.fuel -= self.fuel_consumption * distance
