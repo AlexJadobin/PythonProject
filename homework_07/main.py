@@ -1,9 +1,11 @@
-from models.vb import VB
+from models.vehicle_base import VehicleBase
 from models.ship import Ship
 from models.car import Car
 
 def main():
-    vb = VB(10)
+    #vb = VB(10)
+    #vb.mowe() # Любой транспорт
+    vb = VehicleBase(10)
     vb.mowe() # Любой транспорт
 
     ship = Ship(100,200)
