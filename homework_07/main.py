@@ -4,8 +4,6 @@ from models.car import Car
 from models.vb import VB
 
 def main():
-    #vb = VB(10)
-    #vb.mowe() # Любой транспорт
     vb = VehicleBase(10)
     vb.mowe() # Любой транспорт
 
