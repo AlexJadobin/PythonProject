@@ -18,8 +18,6 @@ class Car:
                 print('Исключение. Топлива нет, толкаем авто до заправки')
                 print('---------')
                 return
-        #else:
-
 
     def move(self,distance):
         if self.fuel < self.fuel_consumption * distance + 4:
@@ -60,11 +58,3 @@ print("Пример №4: если топлива было 10 литров, а �
 car = Car(weight=800,started=0,fuel=10,fuel_consumption=3)
 s = 5  # дистанция 5 километра
 car.move(s)
-
-
-
-
-
-
-
-
