@@ -31,19 +31,21 @@ class Car:
             print('---')
 
     def move(self,distance):
-        try:
-            if self.fuel < self.fuel_consumption * distance:
-                raise NotEnoughFuel
-        except(NotEnoughFuel):
-            print('Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров, а лучше полный бак!!!')
-            print('---------')
-        else:
-            self.fuel -= self.fuel_consumption * distance
-            print('Проехали ', distance, ' км, Остаток топлива : ',self.fuel, ' литра(ов)')
-            print('---')
+        #try:
+            if self.fuel < self.fuel_consumption * distance + 4:
+                #raise NotEnoughFuel
+        #except(NotEnoughFuel):
+                print('Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров и еще 4 литра доехать до заправки !')
+                print('сначала едем на заправку, а затем в пункт назначения')
+                print('---------')
+                return
+            else:
+                self.fuel -= self.fuel_consumption * distance
+                print('Проехали ', distance, ' км, Остаток топлива : ',self.fuel, ' литра(ов)')
+                print('---')
 
-print("Пример №1: если топлива было 50 литров, а расход 5 л/10 км, то проехав 10 км у нас остаётся топлива 0 литров")
-car = Car(weight=800,started=0,fuel=50,fuel_consumption=5)
+print("Пример №1: если топлива было 60 литров, а расход 5 л/10 км, то проехав 10 км у нас остаётся топлива 10 литров")
+car = Car(weight=800,started=0,fuel=60,fuel_consumption=5)
 car.start()
 s = 10  # дистанция 10 километров
 car.move(s)
