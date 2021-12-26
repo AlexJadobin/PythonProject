@@ -44,9 +44,9 @@ car.move(s)
 
 print("Пример №3: если топлива было 0 литров, а нужно срочно ехать!!!")
 car = Car(weight=800,started=0,fuel=0,fuel_consumption=5)
-car.start()
+#car.start()
 
 print("Пример №4: если топлива было 10 литров, а расход 3 л/км, а необходимо проехать 5 км, то куда мы доедем ?")
 car = Car(weight=800,started=0,fuel=10,fuel_consumption=3)
 s = 5  # дистанция 5 километра
-car.move(s)
+#car.move(s)
