@@ -3,29 +3,20 @@ class Car:
         self.weight = weight    # int, вес автомобиля
         self.started = started  # bool, состояние “заведён” или нет
         self.fuel = fuel        # int, условное количество оставшегося топлива
-        self.fuel_consumption = fuel_consumption    # 5. int, условное значение,
-        # сколько единиц топлива расходуется на единицу расстояния
+        self.fuel_consumption = fuel_consumption    # int, условное значение, расхода топлива на единицу расстояния
     def start(self):
         if not(self.started):
             if self.fuel > 0:
                 self.started = True
-                print('двигатель заведен')
-                print('Автомобиль готов, топливо:', self.fuel, 'литров, можно ехать')
+                print('Двигатель заведен, Автомобиль готов, топливо:', self.fuel, 'литров, можно ехать')
                 print('Хорошо покатались')
                 print('---')
             else:
-                #raise LowFuelError('Исключение. Топлива нет, толкаем авто до заправки')
-                print('Исключение. Топлива нет, толкаем авто до заправки')
-                print('---------')
-                return
+                raise LowFuelError("Исключение. Топлива нет, толкаем авто до заправки")
 
     def move(self,distance):
         if self.fuel < self.fuel_consumption * distance + 4:
-            #raise NotEnoughFuel('недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров')
-            print('Исключение: недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров и еще 4 литра доехать до заправки !')
-            print('сначала едем на заправку, а затем в пункт назначения')
-            print('---------')
-            return
+            raise NotEnoughFuel('недостаточно топлива на поездку',self.fuel,'литров, необходимо',self.fuel_consumption * distance, 'литров')
         else:
             self.fuel -= self.fuel_consumption * distance
             print('Проехали ', distance, ' км, Остаток топлива : ',self.fuel, ' литра(ов)')
@@ -34,6 +25,7 @@ class Car:
 # объявление исключений
 class LowFuelError(Exception):
     pass
+
 class NotEnoughFuel(Exception):
     pass
 
