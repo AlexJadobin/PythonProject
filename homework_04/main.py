@@ -1,7 +1,7 @@
 # занятие №4 , задание №1, вариант №1
 # выбор списка простых чисел и формирование списка кубов простых чисел
-sps_prost = [1]
-kub_sps_prost =[1]
+sps_prost = []
+kub_sps_prost =[]
 f = 70
 def prostye(n):
     for j in range(1, n+1):
@@ -49,101 +49,37 @@ print('____________')
 
 
 
-
-# №4, задание №2, вариант №1
-
-print('____________')
-print('задание №2, вариант №1')
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-
-# четные числа
-def filter_odd(vxod_num):
-    if (vxod_num % 2) == 0:
-        return True
-    else:
-        return False
-
-vixod_filter = filter(filter_odd, numbers)
-print("Четные числа: ", list(vixod_filter))
-
-# нечетные чисела
-def filter_odd(vxod_num):
-    if (vxod_num % 2) > 0:
-        return True
-    else:
-        return False
-
-vixod_filter = filter(filter_odd, numbers)
-print("Нечетные числа: ", list(vixod_filter))
-
-# простые числа
-def filter_odd(vxod_num):
-    for i in range(2, vxod_num):
-        if vxod_num % i == 0:
+# №4, задание 2, исправление замечания Сурена
+def is_prostye(n):  # функция проверки числа на вхождение в простые чиста
+    if n == 2 or n == 3: return True
+    if n % 2 == 0 or n < 2: return False
+    for j in range(3, n, 2):
+        if n % j == 0:
             return False
-        else:
-            return True
-
-vixod_filter = filter(filter_odd, numbers)
-print("Простые числа: ", list(vixod_filter))
-
-
-# №4, задание №2, вариант №2
-# filter types
+    return True
 
 print('____________')
-print('задание №2, вариант №2')
+print('задание №2, исправленная функция по замечанию Сурена')
 ODD = "chet"
 EVEN = "nechet"
 PRIME = "prost"
-
-def filter_numbers(y):
-    if x == PRIME:
-        for j in range(1, y + 1):
-            # print('цикл 1 j=', j, ' n=', n)
-            for i in range(2, j + 1):
-                # print('вложенный цикл 2 i=', i, ' j=', j)
-                if j % i == 0 and i != j:
-                    break
-                else:
-                    if i == j:
-                        vixod_filters.append(j)
-                        # print('значение i= ', i, 'значение j= ', j)
-        # print(sps_prost)
-
-    else:
-        for i in range(1, y):
+def filter_numbers(*num, key):
+    vixod_filters = [] # создан пустой выход
+    if key == ODD:
+        for i in num:
 	        if i % 2 == 0:
-	            if x == ODD:
-		            vixod_filters.append(i)
-		            continue
-	            if x == EVEN:
-		            continue
-	        else:
-	            if x == ODD:
-		            continue
-	            if x == EVEN:
-		            vixod_filters.append(i)
-		            continue
+	            vixod_filters.append(i)
+        return vixod_filters
 
-    return
+    if key == EVEN:
+         for i in num:
+            if i % 2 != 0:
+                vixod_filters.append(i)
+         return vixod_filters
 
-num = 80
-#num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-# четные
-vixod_filters = []
-x = ODD
-filter_numbers(num)
-print('выбор четных чисел ', vixod_filters)
+    if key == PRIME:
+        return list(filter(is_prostye, num))
 
-# нечетные
-vixod_filters = []
-x = EVEN
-filter_numbers(num)
-print('выбор нечетных чисел ', vixod_filters)
-
-# простые
-vixod_filters = [1]
-x = PRIME
-filter_numbers(num)
-print('выбор простых чисел ', vixod_filters)
+print('Выбор простых чисел: ', filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, key=PRIME))
+print('Выбор четных чисел: ', filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, key=ODD))
+print('Выбор нечетных чисел: ', filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, key=EVEN))
