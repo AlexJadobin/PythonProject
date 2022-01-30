@@ -9,7 +9,7 @@ def get_prost(y):
 
 prost_str = []
 n = 200
-for chislo in range(1, n):
+for chislo in range(2, n):
     if get_prost(chislo):
         #print(chislo, end=', ')
         prost_str.append(chislo)
@@ -20,7 +20,7 @@ print("---------")
 print("-Вариант №2-")
 
 # занятие №3, задание №1, вариант №2
-sps_prost = [1]
+sps_prost = []
 f = 200
 def prostye(n):
     for j in range(1, n+1):
