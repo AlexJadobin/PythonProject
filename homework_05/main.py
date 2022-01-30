@@ -27,32 +27,36 @@ class Ship(VehicleBase):
                  f" максимальный вес={self.max_weight}"
                  )
 
-ship1 =Ship(100,150)
-print(ship1)
-ship1.set_sail()
-ship1.mowe()
-print('--')
-
 # 5
 class Plane(Ship):
     def __init__(self, weight, max_weight, cargo):
         super().__init__(weight, max_weight)
         self.cargo = cargo
 
-    def add_cargo(cargo):
-        cargo = [2, 4, 6, 8, 10, 12]
-        for n in cargo:
-            n_sum = n + 3
-            print(Plane)
-            print(f"{n} + 3, = {int(n_sum)}")
+    def add_cargo(self, dogruz):
+        self.cargo += dogruz
+        #print(Plane)
+        #print(f"{n} + 3, = {int(n_sum)}")
+        print('После догрузки: ', str(dogruz), ' общий вес груза стал = ', str(self.cargo), 'вызов метода add_cargo')
 
     def mowe(self):
         print('Лечу по воздуху')
 
-plane1 = Plane(50,100,10)
-print(plane1)
-plane1.mowe()
-plane1.add_cargo()
+
+def main(): # функция main
+    ship1 = Ship(100, 150)
+    print(ship1)
+    ship1.set_sail()
+    ship1.mowe()
+    print('--')
+    plane1 = Plane(50,100,10) # груз равен 10
+    print(plane1)
+    plane1.mowe()
+    plane1.add_cargo(5) # после отработки метода, вес груза cargo должен увеличиться на 5
+    plane1.add_cargo(4)  # после отработки метода, вес груза cargo должен увеличиться на 4
+    plane1.add_cargo(6)  # после отработки метода, вес груза cargo должен увеличиться на 6
+
+main()  # вызов фукции, вывод информации.
 
 
 
