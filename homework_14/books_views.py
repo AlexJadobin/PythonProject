@@ -83,6 +83,7 @@ class BookDetailsResource:
 #  перейти в папку урока №9:                            cd homework_09
 #  выполнить команду активации виртуального окружения:  activate.ps1
 
+
 #  Обеспечение запуска нашего app-приложения  в Терминале PyCharm
 #  pip freeze > requirements.txt    заморозить версии ПО окружения
 #  gunicorn books:app               в Unix

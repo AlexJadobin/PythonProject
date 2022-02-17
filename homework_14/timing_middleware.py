@@ -8,6 +8,7 @@ class TimingMiddleware:
         start_time = default_timer()
         req.context.start_time = start_time
 
+
     def process_response(self, req, resp, resource, req_succeeded):
         end_time = default_timer()
         total_time = end_time - req.context.start_time

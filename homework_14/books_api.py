@@ -9,6 +9,7 @@ middlewares = [
 books_list = BooksListResours()
 book_details = BookDetailsResource()
 
+
 app = App(middleware = middlewares)
 app.add_route("/books", books_list)
 app.add_route("/books/{book_id}", book_details)

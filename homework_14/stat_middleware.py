@@ -60,5 +60,6 @@ class StatMiddleware:
             callback(message.payload)
             message.ack()
 
+
     def close(self):
         self.queue.close()
