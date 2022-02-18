@@ -1,5 +1,6 @@
 from falcon import Request, Response
 from kombu import Connection, Message
+
 class StatMiddleware:
     def __init__(self, connection: Connection,
                  queue_name="queue_name", serializer="json",):
