@@ -3,6 +3,7 @@ import logging
 from books_api import app
 logging.basicConfig(level=logging.INFO)
 
+
 def main():
     from waitress import serve
     logging.info("Starting server")

@@ -2,6 +2,7 @@ import logging
 from timeit import default_timer
 logger = logging.getLogger(__name__)
 
+
 class TimingMiddleware:
     def process_request(self, req, resp):
         logger.info('start timer')

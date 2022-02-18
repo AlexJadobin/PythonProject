@@ -47,6 +47,7 @@ class StatMiddleware:
         })
         return message
 
+
     def send_resp_stat(self, req: Request, resp: Response, req_succeeded: bool):
         message = self.prepare_stat_resp_message(req, resp, req_succeeded)
         self.queue.put(

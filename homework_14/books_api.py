@@ -2,6 +2,7 @@ from falcon import App
 from timing_middleware import TimingMiddleware
 from books_views import BooksListResours, BookDetailsResource
 
+
 middlewares = [
     TimingMiddleware(),
 ]
