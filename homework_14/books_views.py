@@ -3,14 +3,13 @@ import falcon
 from waitress import serve
 #from gunicorn import serve
 from falcon import App, Request, Response, HTTP_201, HTTP_400, HTTP_404
-
+logger = logging.getLogger(__name__)
 BOOKS = {
     1: "Маугли",
     2: "Детство",
     3: "Каштанка",
     4: "Алые паруса",
 }
-
 class BooksListResours:
     def on_get(self, req: Request, res: Response):
         books_as_list = [
